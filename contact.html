@@ -213,7 +213,7 @@ main {
   <div class="contact-left">
     <h1>Contact Me!</h1>
   </div>
-  <div class="contact-right">
+  <form class="contact-right" id="contact-form" action="https://formspree.io/f/mnjkqnrv" method="POST">
     <div class="form-row">
       <div class="form-group">
         <label for="nombre">First Name</label>
@@ -238,8 +238,8 @@ main {
       <textarea id="message" name="message" maxlength="2500"></textarea>
       <span class="char-count" id="char-count">0 / 2500</span>
     </div>
-    <button class="send-btn" type="button" id="send-btn" disabled>Send</button>
-  </div>
+    <button class="send-btn" type="submit" id="send-btn" disabled>Send</button>
+  </form>
 </main>
 <script>
 var fields = ['nombre', 'apellido', 'email', 'title', 'message'];
