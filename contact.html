@@ -239,6 +239,7 @@ main {
       <span class="char-count" id="char-count">0 / 2500</span>
     </div>
     <button class="send-btn" type="submit" id="send-btn" disabled>Send</button>
+    <p class="field-error" id="form-status" style="color: var(--black); display: none;"></p>
   </form>
 </main>
 <script>
@@ -267,7 +268,30 @@ document.getElementById('message').addEventListener('input', function() {
   document.getElementById('char-count').textContent = this.value.length + ' / 2500';
 });
 
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = e.target;
+  var data = new FormData(form);
 
+  fetch(form.action, {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  }).then(function(response) {
+    if (response.ok) {
+      alert('Thank you for contacting me! I\'ll get back to you soon.');
+      form.reset();
+      document.getElementById('char-count').textContent = '0 / 2500';
+      btn.disabled = true;
+    } else {
+      alert('Something went wrong. Please try again or email me directly.');
+    }
+  }).catch(function() {
+    alert('Something went wrong. Please check your connection and try again.');
+  });
+});
+
+<p class="field-error" id="form-status" style="color: var(--black); display: none;"></p>
 
 var lastY = 0;
 var header = document.querySelector('header');
@@ -280,7 +304,6 @@ window.addEventListener('scroll', function() {
   }
   lastY = y;
 });
-
 
 (function() {
   var burger = document.getElementById('nav-burger');
