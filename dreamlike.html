@@ -136,19 +136,19 @@ nav a:hover, nav a.active { opacity: 1; text-decoration: underline; }
 </section>
 
 <section class="s-grid">
-  <img src="images/mockup7.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup1.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup10.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup4.jpg" loading="lazy" alt="DREAMLIKE">
   <img src="images/mockup2.jpg" loading="lazy" alt="DREAMLIKE">
   <img src="images/mockup3.jpg" loading="lazy" alt="DREAMLIKE">
-  <img src="images/mockup4.jpg" loading="lazy" alt="DREAMLIKE">
   <img src="images/mockup8.jpg" loading="lazy" alt="DREAMLIKE">
-  <img src="images/mockup6.jpg" loading="lazy" alt="DREAMLIKE">
 </section>
 
 <div class="s-posters">
-  <img src="images/mockup1.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup7.jpg" loading="lazy" alt="DREAMLIKE">
   <img src="images/mockup5.jpg" loading="lazy" alt="DREAMLIKE">
   <img src="images/mockup9.jpg" loading="lazy" alt="DREAMLIKE">
-  <img src="images/mockup10.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup6.jpg" loading="lazy" alt="DREAMLIKE">
 </div>
 
 <div class="s-nav">
@@ -166,7 +166,7 @@ nav a:hover, nav a.active { opacity: 1; text-decoration: underline; }
 <script>
 var lb = document.getElementById('lightbox');
 var lbImg = document.getElementById('lightbox-img');
-document.querySelectorAll('.s-grid img, .s-row5 img').forEach(function(img) {
+document.querySelectorAll('.s-grid img, .s-posters img, .s-row5 img').forEach(function(img) {
   img.addEventListener('click', function() {
     lbImg.src = this.src;
     lb.classList.add('open');
