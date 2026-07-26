@@ -79,6 +79,22 @@ nav a:hover, nav a.active { opacity: 1; text-decoration: underline; }
 #lightbox img { max-width: 92vw; max-height: 92vh; object-fit: contain; aspect-ratio: unset; background: none; cursor: default; box-shadow: 0 8px 60px rgba(0,0,0,0.5); }
 @media (max-width: 768px) { header { padding: 0 5vw; } .s-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 15px; } }
 @media (max-width: 480px) { .s-grid { grid-template-columns: 1fr; } }
+
+/* ROUNDED POSTERS */
+.s-posters {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2vw;
+  padding: 3vw 4vw 5vw;
+}
+.s-posters img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+
+}
   
 /* MOBILE MENU */
 .nav-burger { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--black); line-height: 1; padding: 4px 8px; }
@@ -111,49 +127,33 @@ nav a:hover, nav a.active { opacity: 1; text-decoration: underline; }
 </div>
 
 <section class="s-title">
-  <h1>Magazine</h1>
+  <h1>Dreamlike Website</h1>
 </section>
 <section class="s-desc">
-  <p class="meta"><strong>Five Senses</strong> &nbsp;·&nbsp; 2019 – 2020</p>
-  <p class="meta">Editorial Design</p>
-  <p><strong>Five Senses</strong> is a magazine editorial design which talks about Bompass and Parr — two designers well known for their unique, innovative and transgressive projects of food design, experimental design, sensitive design and sound design, among others. They are also known for organizing shows and events that revolve around their design projects in London. Each chapter of the magazine talks about different ways in which their designs work and they are accompanied by typographic editions, color and paper treatments that complement it.</p>
+  <p class="meta"><strong>Dreamlike</strong> &nbsp;·&nbsp; 2026</p>
+  <p class="meta">Website Design • UI Design • Fashion • E-commerce</p>
+  <p><strong>Dreamlike</strong> is a fashion platform created for young people and young adults who want to embrace the characters that inspired them growing up. By transforming childhood nostalgia into contemporary fashion, the website creates a playful shopping experience where self-expression, creativity and individuality take centre stage.</p>
 </section>
 
 <section class="s-grid">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/71ddfed8-bc01-41a2-af1b-61cff97c9334/55ffe266063973.5b0970599acbb.jpg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/3138a99f-4355-4492-a34e-9052c958333f/IMG_4899.jpeg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/7d61fdbc-c2d5-4194-baa9-ee3a30c5d661/IMG_4898.jpeg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/c84e9a2f-cc8f-44ba-84d4-5f960adb897f/IMG_4902.jpeg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/56c538b5-f6ac-463c-935e-7b7afc37c0d7/IMG_4904.jpeg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/c5256041-b49a-40af-98f9-24d6dedf83c6/IMG_4903.jpeg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/9d46f742-daaa-4173-bbd8-f6452e757764/IMG_4905.jpeg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/df33e4a8-761e-4c25-9dfc-bbaf39a2331a/IMG_4908.jpeg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/132ca03f-7e0a-476f-a3c5-46d6f7c282a8/IMG_4906.jpeg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/f64dcfa6-75a3-4ace-b927-82430a1c32e9/IMG_4909.jpeg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/87ee3931-0a56-4738-bc19-654b95c539fe/IMG_4910.jpeg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/ad1a6707-43e1-43af-bff1-a7bd60924370/IMG_4907.jpeg" loading="lazy" alt="">
+  <img src="images/mockup7.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup2.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup3.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup4.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup8.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup6.jpg" loading="lazy" alt="DREAMLIKE">
 </section>
 
-<div class="s-catalogue">
-  <h2>Catalogue Automation</h2>
-  <p><strong>This project could look like a "magic trick" but it is catalogue automation. The working experience in this field allows to create magazines, catalogues, books and other editorial projects with multiple products, modules and automate them in seconds. This example is a Fashion &amp; Cosmetics magazine for young adults. Check the video below to see the result.</strong></p>
-</div>
-
-<div class="s-video">
-  <video src="videos/catalogue.mp4" controls poster="images/catalogue-poster.png"></video>
-</div>
-
-<div class="s-row5">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/0e3375bc-bf6b-4d6b-9b34-d4701ce8a845/mockup_2.png" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/95ca43df-60c6-48b7-a868-f1cd58a0225b/Catalogue.png" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/b6d93d27-e5cc-4c5f-99ee-3354b5e09ad7/Catalogue5.png" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/086af9ca-45f5-4662-91fc-bbc537ce463a/Catalogue2.png" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/3545cb7d-1745-4b41-9958-777c1d1c7836/mockup1.png" loading="lazy" alt="">
+<div class="s-posters">
+  <img src="images/mockup1.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup5.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup9.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup10.jpg" loading="lazy" alt="DREAMLIKE">
 </div>
 
 <div class="s-nav">
-  <a href="soundcatcher.html">← Previous: Sound Catcher</a>
-  <a href="dreamlike.html">Next: Dreamlike →</a>
+  <a href="magazine.html">← Previous: Magazine</a>
+  <a href="branding.html">Next: Branding →</a>
 </div>
 <section class="contact-wrap">
   <h1><a href="index.html" style="color: inherit; text-decoration: none;">Noa's Portfolio</a></h1>
