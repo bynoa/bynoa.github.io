@@ -4,47 +4,22 @@
   <link rel="icon" type="image/png" href="favicon.ico">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ArtBook - Noa Aguilera</title>
+  <title>Magazine - Noa Aguilera</title>
   <link rel="preconnect" href="https://images.squarespace-cdn.com">
   <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --white: #ffffff;
-  --black: #1a1a1a;
-  --gray: #888;
-  --light: #f5f5f5;
-  --nav-h: 60px;
-}
-body { 
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
-  background: var(--white); 
-  color: var(--black); 
-  font-size: 15px; 
-  line-height: 1.6; 
-}
+:root { --white: #ffffff; --black: #1a1a1a; --gray: #888; --light: #f5f5f5; --nav-h: 60px; }
+body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: var(--white); color: var(--black); font-size: 15px; line-height: 1.6; }
 header { transition: transform 0.3s ease; }
-header { 
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100; 
-  height: var(--nav-h); 
-  display: flex; 
-  align-items: center; justify-content: space-between; 
-  padding: 0 2vw; 
-  background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); 
-  border-bottom: 1px solid rgba(0,0,0,0.06); 
-}
+header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 2vw; background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid rgba(0,0,0,0.06); }
 .site-title { font-size: 25px; font-weight: 700; letter-spacing: 0.02em; text-decoration: none; color: var(--black); }
 nav a { font-size: 15px; font-weight: 600; text-decoration: none; color: var(--black); margin-left: 2rem; letter-spacing: 0.05em; opacity: 0.7; transition: opacity .2s; }
 nav a:hover, nav a.active { opacity: 1; text-decoration: underline; }
 .s-title { padding: calc(var(--nav-h) + 4vw) 4vw 0; }
-.s-title h1 { 
-  font-size: clamp(1.8rem, 4vw, 5rem);
-  font-weight: 750;
-  letter-spacing: -0.05em;
-  line-height: 1; 
-}
+.s-title h1 { font-size: clamp(1.8rem, 4vw, 5rem); font-weight: 750; letter-spacing: -0.05em; line-height: 1; }
 .s-desc { padding: 3vw 4vw 4vw; max-width: 900px; }
 .s-desc .meta { font-size: 12px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--gray); margin-bottom: 0.4rem; }
 .s-desc p { 
-  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  font-size: clamp(0.85rem, 1vw, 0.95rem); 
   color: #333; 
   line-height: 1.5; 
   margin-top: 1.2rem; 
@@ -53,9 +28,9 @@ nav a:hover, nav a.active { opacity: 1; text-decoration: underline; }
 .s-grid { 
   display: grid; 
   grid-template-columns: repeat(3, 1fr); 
-  gap: 10px; 
-  background: #e8e8e8; 
-  padding: 0px; 
+  gap: 50px; 
+  background: var(--white); 
+  padding: 30px; 
 }
 .s-grid img { 
   width: 100%; 
@@ -63,36 +38,64 @@ nav a:hover, nav a.active { opacity: 1; text-decoration: underline; }
   object-fit: cover; 
   display: block; 
 }
+.s-catalogue { 
+  padding: 6vw 4vw; 
+  text-align: center; 
+  margin: 0 auto; 
+  margin-bottom: -5rem;
+}
+.s-catalogue h2 { 
+  font-size: clamp(1.8rem, 4vw, 4rem); 
+  font-weight: 800; 
+  letter-spacing: -0.03em; 
+  margin-bottom: 1rem; 
+  white-space: nowrap; 
+}
+.s-catalogue p { 
+  font-size: clamp(0.85rem, 1vw, 0.95rem); 
+  color: #444; 
+  line-height: 1.35; 
+  margin-bottom: 2rem; 
+  max-width: 70ch; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+.s-video { width: 100%; max-width: 1000px; margin: 0 auto 2px; display: block; }
+@media (max-width: 768px) {
+  .s-catalogue { padding-bottom: 5rem; }
+}
+.s-video video { width: 100%; display: block; }
 .s-nav { padding: 2.5rem 4vw; display: flex; justify-content: space-between; background: var(--white); border-top: 1px solid rgba(0,0,0,0.06); }
 .s-nav a { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--black); text-decoration: underline; text-underline-offset: 4px; }
 .s-nav a:hover { opacity: 0.5; }
+.s-row5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 5rem; }
+.s-row5 img { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; }
 .contact-wrap { padding: 6vw 4vw; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(0,0,0,0.06); }
 .contact-wrap h1 { font-size: clamp(1.8rem, 4vw, 5rem); font-weight: 750; letter-spacing: 0.01em; }
 .contact-btn { display: inline-flex; align-items: center; justify-content: center; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.05em; color: var(--black); text-decoration: none; border: 1px solid var(--black); padding: 0.7rem 1.6rem; transition: background 0.2s, color 0.2s, padding 0.2s; white-space: nowrap; }
 .contact-btn:hover { background: var(--black); color: var(--white); padding: 1.4rem 1.6rem; }
-@media (max-width: 768px) { header { padding: 0 5vw; } .s-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .s-grid { grid-template-columns: 1fr; } }
-#lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 999;
-  background: rgba(0,0,0,0.92);
-  align-items: center;
-  justify-content: center;
-  cursor: zoom-out;
-}
+#lightbox { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(0,0,0,0.92); align-items: center; justify-content: center; cursor: zoom-out; }
 #lightbox.open { display: flex; }
-#lightbox img {
-  max-width: 92vw;
-  max-height: 92vh;
-  object-fit: contain;
-  aspect-ratio: unset;
-  background: none;
-  cursor: default;
-  box-shadow: 0 8px 60px rgba(0,0,0,0.5);
-}
+#lightbox img { max-width: 92vw; max-height: 92vh; object-fit: contain; aspect-ratio: unset; background: none; cursor: default; box-shadow: 0 8px 60px rgba(0,0,0,0.5); }
+@media (max-width: 768px) { header { padding: 0 5vw; } .s-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 15px; } }
+@media (max-width: 480px) { .s-grid { grid-template-columns: 1fr; } }
 
+/* ROUNDED POSTERS */
+.s-posters {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2vw;
+  padding: 3vw 4vw 5vw;
+}
+.s-posters img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+
+}
+  
 /* MOBILE MENU */
 .nav-burger { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--black); line-height: 1; padding: 4px 8px; }
 .nav-mobile { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; background: rgba(255,255,255,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(0,0,0,0.06); z-index: 99; flex-direction: column; padding: 1rem 6vw 1.5rem; gap: 1rem; }
@@ -111,54 +114,59 @@ nav a:hover, nav a.active { opacity: 1; text-decoration: underline; }
 </head>
 <body>
 <header>
-  <a class="site-title" href="/index.html">Noa Aguilera</a>
+  <a class="site-title" href="/">Noa Aguilera</a>
   <nav>
-    <a href="/index.html">Projects</a>
-    <a href="/about//about/index.html">About me</a>
+    <a href="/">Projects</a>
+    <a href="/about/">About me</a>
   </nav>
   <button class="nav-burger" id="nav-burger" aria-label="Menu">+</button>
 </header>
 <div class="nav-mobile" id="nav-mobile">
-  <a href="/index.html">Projects</a>
-    <a href="/about//about/index.html">About me</a>
+  <a href="/">Projects</a>
+    <a href="/about/">About me</a>
 </div>
+
 <section class="s-title">
-  <h1>ArtBook</h1>
+  <h1>Dreamlike Website</h1>
 </section>
 <section class="s-desc">
-  <p class="meta"><Strong>ArtBook</Strong> &nbsp;·&nbsp; 2023 – 2025</p>
-  <p class="meta">Art &nbsp;·&nbsp; Sketches, Line Art &amp; Final Result</p>
-  <p><strong>The Art of Noa Aguilera</strong> is an illustrated artbook that reveals my full creative process - from concept and sketch to final colours, lighting, and effects. It also features original character designs from three of my story projects, including <em>Framing the Stars</em>, a tale I wrote about Wanda, an astronaut searching for a true home. Her journey leads her to Mirabilia, a mysterious planet cursed by human fears. As she helps heal its strange inhabitants, she discovers the meaning of belonging, empathy, and inner growth. This project combines illustration and storytelling to reflect my vision as both an artist and a writer.</p>
+  <p class="meta"><strong>Dreamlike</strong> &nbsp;·&nbsp; 2026</p>
+  <p class="meta">Website Design, UI Design, Fashion, E-commerce</p>
+  <p><strong>Dreamlike</strong> is a fashion platform created for young people and young adults who want to embrace the characters that inspired them growing up. By transforming childhood nostalgia into contemporary fashion, the website creates a playful shopping experience where self-expression, creativity and individuality take centre stage.</p>
 </section>
+
 <section class="s-grid">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/a112bf67-6845-432e-9eb0-fd8410a7b20d/productview.jpg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/b4f307bd-bb38-4fe9-98e9-d3f28715557b/cover.jpg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/4f3b6ca1-c57e-42ba-a0b7-a7fc6976500c/spread2.jpg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/35c6e189-c419-4343-9618-1a5edaab7df8/spread7.jpg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/570ef096-2340-448e-82a0-a6b9d63b17ff/spreadsview.jpg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/3212c720-6d96-4efe-81da-6dc0e02cf83d/spreadsview2.jpg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/de921848-5d27-41a5-92c0-c1f3c3451850/spread4.jpg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/5b2443b7-78bb-476d-b6d4-9cbbdf136b69/spread8.jpg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/f9baf9d0-82e8-4994-a207-aeaf30252cb6/spread6.jpg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/8d26b50a-d0bb-4baf-8436-9680512a74e8/spread5.jpg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/c327d124-d495-49b2-be66-1b3ebc01c33d/spread1.jpg" loading="lazy" alt="">
-  <img src="https://images.squarespace-cdn.com/content/v1/687dea4beba7ec76c6c45445/c227e083-e519-421f-b70b-019845e701b2/spread3.jpg" loading="lazy" alt="">
+  <img src="images/mockup1.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup10.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup4.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup2.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup3.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup8.jpg" loading="lazy" alt="DREAMLIKE">
 </section>
+
+<div class="s-posters">
+  <img src="images/mockup7.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup5.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup9.jpg" loading="lazy" alt="DREAMLIKE">
+  <img src="images/mockup6.jpg" loading="lazy" alt="DREAMLIKE">
+</div>
+
 <div class="s-nav">
-  <a href="/photobook/photobook.html">← Previous: PhotoBook</a>
-  <span></span>
+  <a href="/magazine/">← Previous: Magazine</a>
+  <a href="/branding/">Next: Branding →</a>
 </div>
 <section class="contact-wrap">
-  <h1><a href="/index.html" style="color: inherit; text-decoration: none;">Noa's Portfolio</a></h1>
-  <a class="contact-btn" href="/contact/index.html">Contact me!</a>
+  <h1><a href="/" style="color: inherit; text-decoration: none;">Noa's Portfolio</a></h1>
+  <a class="contact-btn" href="/contact/">Contact me!</a>
 </section>
+
 <div id="lightbox">
   <img id="lightbox-img" src="" alt="">
 </div>
 <script>
 var lb = document.getElementById('lightbox');
 var lbImg = document.getElementById('lightbox-img');
-document.querySelectorAll('.s-grid img').forEach(function(img) {
+document.querySelectorAll('.s-grid img, .s-posters img, .s-row5 img').forEach(function(img) {
   img.addEventListener('click', function() {
     lbImg.src = this.src;
     lb.classList.add('open');
@@ -170,21 +178,6 @@ lb.addEventListener('click', function(e) {
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') lb.classList.remove('open');
 });
-
-
-
-var lastY = 0;
-var header = document.querySelector('header');
-window.addEventListener('scroll', function() {
-  var y = window.scrollY;
-  if (y > lastY && y > 80) {
-    header.style.transform = 'translateY(-100%)';
-  } else {
-    header.style.transform = 'translateY(0)';
-  }
-  lastY = y;
-});
-
 
 (function() {
   var burger = document.getElementById('nav-burger');
